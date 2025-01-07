@@ -1,3 +1,4 @@
+<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="100%">
 <h2 align="center">Hi! 👋 <br>Shabbir here!<br>I'm an ML Dev, not a regular one 🤫<br>Quantum ML excites me the most 😩</h2>
 
 ###
@@ -31,6 +32,7 @@
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" height="30" alt="jupyter logo"  />
 </div>
+<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="100%">
 
 ###
 
