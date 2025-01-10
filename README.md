@@ -44,6 +44,4 @@
 
 ![snake gif](https://github.com/Shabbir05/Shabbir05/blob/output/github-snake-dark.svg)
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Shabbir05&theme=radical&hide_border=true&include_all_commits=true&count_private=true)
-![Streak Stats](https://github-readme-streak-stats.herokuapp.com/?user=Shabbir05&theme=radical&hide_border=true)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Shabbir05&theme=radical&hide_border=true&include_all_commits=true&count_private=true&layout=compact)
 <img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="100%">
