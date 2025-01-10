@@ -1,0 +1,43 @@
+name: Update README with Stats
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs daily
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Fetch PAT from private repository
+        run: |
+          git clone https://github.com/YourUsername/YourPrivateRepo.git private-repo
+          export GH_PAT=$(cat private-repo/GH_PAT)
+
+      - name: Generate GitHub Stats
+        env:
+          GH_TOKEN: $GH_PAT
+        run: |
+          curl -o github_stats.md "https://github-readme-stats.vercel.app/api?username=Shabbir05&theme=radical&hide_border=true&include_all_commits=true&count_private=true&token=$GH_PAT"
+          curl -o github_streak.md "https://github-readme-streak-stats.herokuapp.com/?user=Shabbir05&theme=radical&hide_border=true&token=$GH_PAT"
+          curl -o github_langs.md "https://github-readme-stats.vercel.app/api/top-langs/?username=Shabbir05&theme=radical&hide_border=true&include_all_commits=true&count_private=true&layout=compact&token=$GH_PAT"
+
+      - name: Update README
+        run: |
+          sed -i '/<!-- START STATS -->/,/<!-- END STATS -->/d' README.md
+          echo '<!-- START STATS -->' >> README.md
+          echo '![](github_stats.md)' >> README.md
+          echo '![](github_streak.md)' >> README.md
+          echo '![](github_langs.md)' >> README.md
+          echo '<!-- END STATS -->' >> README.md
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "Update README with GitHub Stats"
+          git push
